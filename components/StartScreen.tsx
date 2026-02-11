@@ -26,9 +26,9 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
               Challenge Overview
             </h3>
             <ul className="text-xs sm:text-sm md:text-base space-y-2 sm:space-y-3 md:space-y-4 text-slate-900 font-bold uppercase tracking-normal px-2">
-              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">01.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Navigate high-fidelity memory spaces</span></li>
-              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">02.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Solve real-world C-logic traps</span></li>
-              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">03.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Demonstrate architectural proficiency</span></li>
+              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">01.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Explore 3D memory spaces</span></li>
+              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">02.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Solve coding puzzles</span></li>
+              <li className="flex gap-2 sm:gap-3 items-start"><span className="text-blue-600 flex-shrink-0">03.</span> <span className="text-xs sm:text-sm md:text-base leading-relaxed break-words">Show your skills</span></li>
             </ul>
           </div>
           <div className="p-4 sm:p-6 md:p-8 lg:p-10 border border-slate-100 bg-slate-50 shadow-sm rounded-sm flex flex-col justify-center">
