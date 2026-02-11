@@ -48,7 +48,7 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
             onClick={onStart}
             className="group relative w-full sm:w-auto px-4 sm:px-8 md:px-12 lg:px-16 py-2 sm:py-3 md:py-4 bg-slate-950 text-white font-black uppercase tracking-normal overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl sm:shadow-2xl rounded-sm text-xs sm:text-sm md:text-base"
           >
-            <span className="relative z-10 whitespace-nowrap">Start Challenge</span>
+            <span className="relative z-10 whitespace-nowrap">Ika Modhaledadhama...</span>
             <div className="absolute inset-0 bg-blue-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-expo"></div>
           </button>
         </div>
