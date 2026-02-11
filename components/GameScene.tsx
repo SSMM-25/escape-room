@@ -345,8 +345,36 @@ const GameScene: React.FC<GameSceneProps> = ({
         </group>
       </InteractiveObject>
 
+      {/* SPEAKER */}
+      <group position={[1.8, 0.8, -1.5]}>
+        <InteractiveObject name="SPEAKER" position={[0, 0, 0]} onClick={() => onObjectClick('SPEAKER')} onPointerOver={() => onObjectClick('SPEAKER')} hoverScale={1.05}>
+          <mesh castShadow>
+            <cylinderGeometry args={[0.15, 0.15, 0.3, 16]} />
+            <meshStandardMaterial color="#1e293b" />
+          </mesh>
+          <mesh position={[0, 0.16, 0]}>
+            <cylinderGeometry args={[0.12, 0.12, 0.02, 16]} />
+            <meshStandardMaterial color="#475569" />
+          </mesh>
+        </InteractiveObject>
+      </group>
+
+      {/* BOARD */}
+      <group position={[-1.5, 1.2, -1.8]}>
+        <InteractiveObject name="BOARD" position={[0, 0, 0]} onClick={() => onObjectClick('BOARD')} onPointerOver={() => onObjectClick('BOARD')} hoverScale={1.05}>
+          <mesh castShadow>
+            <boxGeometry args={[0.8, 0.6, 0.02]} />
+            <meshStandardMaterial color="#0f172a" />
+          </mesh>
+          <mesh position={[0, 0, 0.011]}>
+            <planeGeometry args={[0.75, 0.55]} />
+            <meshStandardMaterial color="#1e293b" />
+          </mesh>
+        </InteractiveObject>
+      </group>
+
       {/* PHONE */}
-      <InteractiveObject name="PHONE" position={[-0.4, 1.03, 0.5]} rotation={[-Math.PI / 2, 0, -0.2]} onClick={() => onObjectClick('PHONE')} hoverScale={1.1}>
+      <InteractiveObject name="PHONE" position={[-0.4, 1.03, 0.5]} rotation={[-Math.PI / 2, 0, -0.2]} onClick={() => onObjectClick('PHONE')} onPointerOver={() => onObjectClick('PHONE')} hoverScale={1.1}>
         <group scale={0.6}>
           <mesh castShadow><boxGeometry args={[0.2, 0.4, 0.02]} /><meshStandardMaterial color="#0f172a" /></mesh>
           <mesh position={[0, 0, 0.011]}>

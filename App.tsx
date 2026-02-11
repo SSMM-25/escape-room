@@ -163,7 +163,7 @@ export default function App() {
     }
 
     if (objectName === 'PHONE') {
-      showSystemMessage("100% daily data quots is used!");
+      showSystemMessage("100% daily data quota is used!");
       return;
     }
 
@@ -205,6 +205,16 @@ export default function App() {
       } else {
         showSystemMessage("MAGNETICALLY SEALED. TRY SMARTER, NOT HARDER.");
       }
+      return;
+    }
+
+    if (objectName === 'SPEAKER') {
+      showSystemMessage("paadu gajala paadu");
+      return;
+    }
+
+    if (objectName === 'BOARD') {
+      showSystemMessage("questions kaavalaaa");
       return;
     }
 
