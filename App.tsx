@@ -140,7 +140,7 @@ export default function App() {
       return;
     }
     if (objectName === 'KEYBOARD') {
-      showSystemMessage("CLICK CLACK. SATISFYING TACTILE FEEDBACK.");
+      showSystemMessage("device not connected");
       return;
     }
     if (objectName === 'HOLOGRAM') {
@@ -166,7 +166,7 @@ export default function App() {
       if (lampOn) {
         showSystemMessage(`ENCRYPTED DATA FOUND: ${currentLevel.pinCode}`);
       } else {
-        showSystemMessage("404: SOCIAL LIFE NOT FOUND.");
+        showSystemMessage("100% daily data quots is used!");
       }
       return;
     }
@@ -191,9 +191,9 @@ export default function App() {
       return;
     }
 
-    if (objectName === 'HIDDEN_BOOK' && currentLevel.id === 2) {
+    if (objectName === 'HIDDEN_BOOK') {
       setDiscoveryState(prev => ({ ...prev, bookMoved: !prev.bookMoved }));
-      showSystemMessage(discoveryState.bookMoved ? "BOOK RESTORED." : "WAIT, WHAT'S UNDER HERE?");
+      showSystemMessage(discoveryState.bookMoved ? "BOOK RESTORED." : "1 day batting eh nighout chedham lee");
       return;
     }
 
@@ -209,6 +209,11 @@ export default function App() {
       } else {
         showSystemMessage("MAGNETICALLY SEALED. TRY SMARTER, NOT HARDER.");
       }
+      return;
+    }
+
+    if (objectName === 'PAPER') {
+      showSystemMessage("veedu inthaki manodena");
       return;
     }
 
