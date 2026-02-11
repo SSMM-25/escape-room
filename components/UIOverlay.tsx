@@ -39,11 +39,13 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-50/95 backdrop-blur-xl p-4 sm:p-6">
         <div className="max-w-sm w-full p-6 sm:p-8 text-center bg-white border border-slate-200 shadow-2xl rounded-sm">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-3 sm:mb-4 italic tracking-tighter">VAULT BREACHED</h2>
-          <p className="text-xs text-slate-500 mb-6 sm:mb-8 sm:mb-10 leading-relaxed uppercase tracking-widest px-2">
-            Expert proficiency in system-level architecture confirmed. Security session terminated.
-          </p>
-          <button onClick={onRestart} className="w-full py-3 sm:py-4 md:py-5 bg-slate-900 text-white font-black uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[9px] sm:text-[10px] hover:bg-slate-800 transition-colors rounded-sm">Return to Home</button>
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-3 sm:mb-4 italic tracking-tight">VAULT BREACHED</h2>
+            <p className="text-xs text-slate-500 mb-6 sm:mb-8 sm:mb-10 leading-relaxed uppercase tracking-normal sm:tracking-widest px-2">
+              Expert proficiency in system-level architecture confirmed. Security session terminated.
+            </p>
+            <button onClick={onRestart} className="w-full py-3 sm:py-4 md:py-5 bg-slate-900 text-white font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[9px] sm:text-[10px] hover:bg-slate-800 transition-colors rounded-sm">Return to Home</button>
+          </div>
         </div>
       </div>
     );
@@ -66,11 +68,11 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600">Reward Protocol Active</span>
             </div>
             
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-2 italic tracking-tighter uppercase">Impressive Logic</h3>
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mb-6 sm:mb-8">Stage 01 Decryption Successful</p>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-2 italic tracking-tight uppercase">Impressive Logic</h3>
+            <p className="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] mb-6 sm:mb-8">Stage 01 Decryption Successful</p>
             
             <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
-              <div className="text-[9px] sm:text-[10px] font-black text-slate-900 uppercase tracking-widest mb-2 flex items-center gap-2">
+              <div className="text-[9px] sm:text-[10px] font-black text-slate-900 uppercase tracking-normal sm:tracking-widest mb-2 flex items-center gap-2">
                 <span className="w-3 sm:w-4 h-px bg-slate-300"></span>
                 Top 3 Prizes
               </div>
@@ -78,21 +80,21 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-yellow-400 shadow-sm animate-in slide-in-from-left duration-500 delay-100">
                   <div className="flex items-center gap-2 sm:gap-4">
                     <span className="text-lg sm:text-xl font-black text-yellow-500">01</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400">Grand Winner</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal sm:tracking-widest text-slate-400">Grand Winner</span>
                   </div>
                   <span className="text-2xl sm:text-3xl font-black text-slate-900">300</span>
                 </div>
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-slate-300 shadow-sm animate-in slide-in-from-left duration-500 delay-200">
                   <div className="flex items-center gap-2 sm:gap-4">
                     <span className="text-lg sm:text-xl font-black text-slate-400">02</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400">Runner Up</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal sm:tracking-widest text-slate-400">Runner Up</span>
                   </div>
                   <span className="text-xl sm:text-2xl font-black text-slate-900">200</span>
                 </div>
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-orange-400 shadow-sm animate-in slide-in-from-left duration-500 delay-300">
                   <div className="flex items-center gap-2 sm:gap-4">
                     <span className="text-lg sm:text-xl font-black text-orange-400">03</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400">Third Place</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal sm:tracking-widest text-slate-400">Third Place</span>
                   </div>
                   <span className="text-lg sm:text-xl font-black text-slate-900">100</span>
                 </div>
