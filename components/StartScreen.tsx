@@ -36,9 +36,6 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
               "Mastering the machine starts here. This is not a game; it is an assessment of your potential."
             </p>
             <div className="mt-6 sm:mt-8 md:mt-10 pt-4 sm:pt-5 md:pt-6 border-t border-slate-200">
-              <div className="flex justify-center items-center text-[8px] sm:text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400">
-                <span className="text-blue-600">Ready to Start</span>
-              </div>
             </div>
           </div>
         </div>
