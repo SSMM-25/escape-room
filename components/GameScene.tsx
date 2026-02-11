@@ -346,15 +346,23 @@ const GameScene: React.FC<GameSceneProps> = ({
       </InteractiveObject>
 
       {/* SPEAKER */}
-      <group position={[1.8, 0.8, -1.5]}>
-        <InteractiveObject name="SPEAKER" position={[0, 0, 0]} onClick={() => onObjectClick('SPEAKER')} onPointerOver={() => onObjectClick('SPEAKER')} hoverScale={1.05}>
+      <group position={[1.0, 0.9, -1.0]}>
+        <InteractiveObject name="SPEAKER" position={[0, 0, 0]} onClick={() => onObjectClick('SPEAKER')} onPointerOver={() => onObjectClick('SPEAKER')} hoverScale={1.1}>
           <mesh castShadow>
-            <cylinderGeometry args={[0.15, 0.15, 0.3, 16]} />
-            <meshStandardMaterial color="#1e293b" />
+            <cylinderGeometry args={[0.25, 0.25, 0.5, 16]} />
+            <meshStandardMaterial color="#dc2626" />
           </mesh>
-          <mesh position={[0, 0.16, 0]}>
-            <cylinderGeometry args={[0.12, 0.12, 0.02, 16]} />
-            <meshStandardMaterial color="#475569" />
+          <mesh position={[0, 0.26, 0]}>
+            <cylinderGeometry args={[0.22, 0.22, 0.02, 16]} />
+            <meshStandardMaterial color="#7f1d1d" />
+          </mesh>
+          <mesh position={[0, 0.18, 0]}>
+            <cylinderGeometry args={[0.08, 0.08, 0.15, 8]} />
+            <meshStandardMaterial color="#991b1b" />
+          </mesh>
+          <mesh position={[0, -0.25, 0]}>
+            <cylinderGeometry args={[0.3, 0.3, 0.05, 16]} />
+            <meshStandardMaterial color="#1e293b" />
           </mesh>
         </InteractiveObject>
       </group>
