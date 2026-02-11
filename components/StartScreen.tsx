@@ -16,7 +16,7 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
         <div className="animate-in fade-in slide-in-from-top-12 duration-1000">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-normal mb-3 sm:mb-4 md:mb-6 italic uppercase leading-relaxed">C-ESCAPE</h1>
           <div className="h-2 sm:h-2.5 md:h-3 w-16 sm:w-20 md:w-32 lg:w-48 bg-blue-600 mx-auto mb-3 sm:mb-4 md:mb-6"></div>
-          <p className="text-slate-900 text-xs sm:text-sm md:text-base uppercase tracking-normal font-black px-6 leading-relaxed">Architecture // Logic // Performance</p>
+          <p className="text-slate-900 text-xs sm:text-sm md:text-base uppercase tracking-normal font-black px-6 leading-relaxed">Logic // Performance</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-6 text-left animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
@@ -49,7 +49,7 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
             onClick={onStart}
             className="group relative w-full sm:w-auto px-4 sm:px-8 md:px-12 lg:px-16 py-2 sm:py-3 md:py-4 bg-slate-950 text-white font-black uppercase tracking-normal overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl sm:shadow-2xl rounded-sm text-xs sm:text-sm md:text-base"
           >
-            <span className="relative z-10 whitespace-nowrap">Start Assessment</span>
+            <span className="relative z-10 whitespace-nowrap">Ika modhaledadhama...</span>
             <div className="absolute inset-0 bg-blue-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-expo"></div>
           </button>
         </div>
