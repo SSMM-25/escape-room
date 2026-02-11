@@ -163,11 +163,7 @@ export default function App() {
     }
 
     if (objectName === 'PHONE') {
-      if (lampOn) {
-        showSystemMessage(`ENCRYPTED DATA FOUND: ${currentLevel.pinCode}`);
-      } else {
-        showSystemMessage("100% daily data quots is used!");
-      }
+      showSystemMessage("100% daily data quots is used!");
       return;
     }
 

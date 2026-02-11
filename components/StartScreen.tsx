@@ -33,7 +33,7 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
           </div>
           <div className="p-3 sm:p-4 md:p-6 lg:p-8 border border-slate-100 bg-slate-50 shadow-sm rounded-sm flex flex-col justify-center">
             <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium italic px-2 sm:px-4 break-words">
-              "Test your skills in this escape room challenge."
+              "Mastering the machine starts here. This is not a game; it is an assessment of your potential."
             </p>
             <div className="mt-6 sm:mt-8 md:mt-10 pt-4 sm:pt-5 md:pt-6 border-t border-slate-200">
             </div>
@@ -45,7 +45,7 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
             onClick={onStart}
             className="group relative w-full sm:w-auto px-3 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-slate-950 text-white font-black uppercase tracking-normal overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl sm:shadow-2xl rounded-sm text-xs sm:text-sm md:text-base"
           >
-            <span className="relative z-10 whitespace-nowrap">Start Challenge</span>
+            <span className="relative z-10 whitespace-nowrap">Ika Modhaledadhama...</span>
             <div className="absolute inset-0 bg-blue-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-expo"></div>
           </button>
         </div>

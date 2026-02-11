@@ -168,7 +168,7 @@ const GameScene: React.FC<GameSceneProps> = ({
 
       {/* MECHANICAL KEYBOARD */}
       <group position={[0, 1.05, 0.2]}>
-        <InteractiveObject name="KEYBOARD" position={[0, 0, 0]} onClick={() => onObjectClick('KEYBOARD')} hoverScale={1.05}>
+        <InteractiveObject name="KEYBOARD" position={[0, 0, 0]} onClick={() => onObjectClick('KEYBOARD')} onPointerOver={() => onObjectClick('KEYBOARD')} hoverScale={1.05}>
           <mesh castShadow>
             <boxGeometry args={[0.5, 0.02, 0.2]} />
             <meshStandardMaterial color="#0f172a" />
@@ -274,14 +274,14 @@ const GameScene: React.FC<GameSceneProps> = ({
 
       {/* SPECIAL BOOK - Available in all levels */}
       <group position={[0.4, 1.05, -0.4]}>
-        <InteractiveObject name="HIDDEN_BOOK" position={[0, 0.05, 0]} onClick={() => onObjectClick('HIDDEN_BOOK')} ref={hiddenBookRef} hoverScale={1.1}>
+        <InteractiveObject name="HIDDEN_BOOK" position={[0, 0.05, 0]} onClick={() => onObjectClick('HIDDEN_BOOK')} onPointerOver={() => onObjectClick('HIDDEN_BOOK')} ref={hiddenBookRef} hoverScale={1.1}>
           <mesh castShadow><boxGeometry args={[0.3, 0.1, 0.4]} /><meshStandardMaterial color="#b91c1c" /></mesh>
         </InteractiveObject>
       </group>
 
       {/* STACK OF PAPERS */}
       <group position={[-0.4, 1.05, -0.2]} rotation={[0, -0.3, 0]}>
-        <InteractiveObject name="PAPER" position={[0, 0, 0]} onClick={() => onObjectClick('PAPER')} hoverScale={1.05}>
+        <InteractiveObject name="PAPER" position={[0, 0, 0]} onClick={() => onObjectClick('PAPER')} onPointerOver={() => onObjectClick('PAPER')} hoverScale={1.05}>
           {[...Array(5)].map((_, i) => (
             <mesh key={i} position={[0, i * 0.005, 0]} rotation={[0, Math.random() * 0.1, 0]}>
               <boxGeometry args={[0.25, 0.002, 0.35]} />
