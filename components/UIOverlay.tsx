@@ -40,11 +40,11 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-50/95 backdrop-blur-xl p-4 sm:p-6">
         <div className="max-w-sm w-full p-6 sm:p-8 text-center bg-white border border-slate-200 shadow-2xl rounded-sm">
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-3 sm:mb-4 italic tracking-normal">VAULT BREACHED</h2>
-            <p className="text-xs text-slate-500 mb-4 sm:mb-6 leading-relaxed uppercase tracking-normal px-4">
-              Expert proficiency in system-level architecture confirmed. Security session terminated.
+            <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 mb-2 sm:mb-3 italic tracking-normal leading-relaxed">VAULT BREACHED</h2>
+            <p className="text-xs text-slate-500 mb-3 sm:mb-4 leading-relaxed uppercase tracking-normal px-6 break-words">
+              Expert proficiency confirmed. Security terminated.
             </p>
-            <button onClick={onRestart} className="w-full py-2 sm:py-3 md:py-4 bg-slate-900 text-white font-black uppercase tracking-normal text-[9px] sm:text-[10px] hover:bg-slate-800 transition-colors rounded-sm">Return to Home</button>
+            <button onClick={onRestart} className="w-full py-2 sm:py-3 bg-slate-900 text-white font-black uppercase tracking-normal text-[9px] sm:text-[10px] hover:bg-slate-800 transition-colors rounded-sm">Return Home</button>
           </div>
         </div>
       </div>
@@ -68,8 +68,8 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600">Reward Protocol Active</span>
             </div>
             
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-2 italic tracking-normal uppercase">Impressive Logic</h3>
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-normal mb-4 sm:mb-6">Stage 01 Decryption Successful</p>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 mb-2 italic tracking-normal leading-relaxed uppercase">Impressive Logic</h3>
+            <p className="text-[9px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-normal mb-3 sm:mb-4">Stage 01 Complete</p>
             
             <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
               <div className="text-[9px] sm:text-[10px] font-black text-slate-900 uppercase tracking-normal mb-2 flex items-center gap-2">
@@ -78,23 +78,23 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
               </div>
               <div className="grid grid-cols-1 gap-2 sm:gap-3">
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-yellow-400 shadow-sm animate-in slide-in-from-left duration-500 delay-100">
-                  <div className="flex items-center gap-2 sm:gap-4">
-                    <span className="text-lg sm:text-xl font-black text-yellow-500">01</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400">Grand Winner</span>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="text-base sm:text-lg font-black text-yellow-500">01</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400 break-words">Winner</span>
                   </div>
                   <span className="text-2xl sm:text-3xl font-black text-slate-900">300</span>
                 </div>
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-slate-300 shadow-sm animate-in slide-in-from-left duration-500 delay-200">
-                  <div className="flex items-center gap-2 sm:gap-4">
-                    <span className="text-lg sm:text-xl font-black text-slate-400">02</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400">Runner Up</span>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="text-base sm:text-lg font-black text-slate-400">02</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400 break-words">Runner Up</span>
                   </div>
                   <span className="text-xl sm:text-2xl font-black text-slate-900">200</span>
                 </div>
                 <div className="flex items-center justify-between p-3 sm:p-4 md:p-5 bg-white border border-slate-200 border-l-4 sm:border-l-6 md:border-l-8 border-orange-400 shadow-sm animate-in slide-in-from-left duration-500 delay-300">
-                  <div className="flex items-center gap-2 sm:gap-4">
-                    <span className="text-lg sm:text-xl font-black text-orange-400">03</span>
-                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400">Third Place</span>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="text-base sm:text-lg font-black text-orange-400">03</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-normal text-slate-400 break-words">Third Place</span>
                   </div>
                   <span className="text-lg sm:text-xl font-black text-slate-900">100</span>
                 </div>
