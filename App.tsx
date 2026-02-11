@@ -296,7 +296,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-full h-screen relative bg-slate-50 font-mono overflow-hidden">
+    <div className="w-screen h-screen relative bg-slate-50 font-mono overflow-hidden">
       {status === 'START_SCREEN' ? (
         <StartScreen onStart={handleStart} />
       ) : (
