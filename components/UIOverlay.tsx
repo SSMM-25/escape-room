@@ -251,46 +251,46 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
 
   if (status === 'PIN_ENTRY') {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/10 backdrop-blur-md p-4">
-        <div className="max-w-sm w-full bg-white border border-slate-200 p-8 shadow-2xl relative rounded-sm">
-          <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-slate-900">[ X ]</button>
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-bold uppercase tracking-widest text-slate-900 mb-1">Security PIN</h3>
-            <p className="text-[9px] text-slate-400 uppercase tracking-widest italic">Check illuminated mobile device</p>
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/10 backdrop-blur-md p-3 sm:p-4">
+        <div className="max-w-xs sm:max-w-sm w-full bg-white border border-slate-200 p-6 sm:p-8 shadow-2xl relative rounded-sm">
+          <button onClick={onClose} className="absolute top-3 sm:top-4 right-3 sm:right-4 text-slate-400 hover:text-slate-900 text-sm sm:text-base">[ X ]</button>
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-base sm:text-lg font-bold uppercase tracking-widest text-slate-900 mb-1">Security PIN</h3>
+            <p className="text-[8px] sm:text-[9px] text-slate-400 uppercase tracking-widest italic">Check illuminated mobile device</p>
           </div>
-          <div className="grid grid-cols-3 gap-2 mb-6">
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-4 sm:mb-6">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
               <button 
                 key={num} 
                 onClick={() => pinValue.length < 4 && setPinValue(prev => prev + num)}
-                className="h-14 bg-slate-50 border border-slate-200 text-slate-900 font-bold hover:bg-slate-100 transition-colors rounded-sm"
+                className="h-12 sm:h-14 bg-slate-50 border border-slate-200 text-slate-900 font-bold hover:bg-slate-100 transition-colors rounded-sm text-sm sm:text-base"
               >
                 {num}
               </button>
             ))}
             <button 
               onClick={() => setPinValue('')}
-              className="h-14 bg-red-50 border border-red-100 text-red-500 font-bold text-[10px] uppercase rounded-sm"
+              className="h-12 sm:h-14 bg-red-50 border border-red-100 text-red-500 font-bold text-[8px] sm:text-[10px] uppercase rounded-sm"
             >
               Clear
             </button>
             <button 
               key={0} 
               onClick={() => pinValue.length < 4 && setPinValue(prev => prev + 0)}
-              className="h-14 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-sm"
+              className="h-12 sm:h-14 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-sm text-sm sm:text-base"
             >
               0
             </button>
             <button 
               onClick={() => onPinSubmit(pinValue)}
-              className="h-14 bg-emerald-50 border border-emerald-100 text-emerald-600 font-bold text-[10px] uppercase rounded-sm"
+              className="h-12 sm:h-14 bg-emerald-50 border border-emerald-100 text-emerald-600 font-bold text-[8px] sm:text-[10px] uppercase rounded-sm"
             >
               Enter
             </button>
           </div>
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-2 sm:gap-3">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="w-10 h-14 border-b-2 border-slate-900 flex items-center justify-center text-2xl font-black">
+              <div key={i} className="w-8 sm:w-10 h-12 sm:h-14 border-b-2 border-slate-900 flex items-center justify-center text-xl sm:text-2xl font-black">
                 {pinValue[i] ? '*' : ''}
               </div>
             ))}
@@ -305,30 +305,30 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
   const question = level.questions[currentQuestionIdx];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/10 backdrop-blur-md p-4 md:p-6 overflow-y-auto">
-      <div className={`max-w-xl w-full bg-white border border-slate-200 p-8 md:p-12 shadow-2xl relative my-auto rounded-sm ${isWrongAnswer ? 'animate-shake' : ''}`}>
-        <button onClick={onClose} className="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors">[ CLOSE ]</button>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/10 backdrop-blur-md p-3 sm:p-4 md:p-6 overflow-y-auto">
+      <div className={`max-w-lg sm:max-w-xl w-full bg-white border border-slate-200 p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl relative my-auto rounded-sm ${isWrongAnswer ? 'animate-shake' : ''}`}>
+        <button onClick={onClose} className="absolute top-4 sm:top-6 right-4 sm:right-6 text-slate-400 hover:text-slate-900 transition-colors text-sm sm:text-base">[ CLOSE ]</button>
 
-        <div className="mb-6 flex justify-between items-end border-b border-slate-100 pb-6">
+        <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:justify-between sm:items-end border-b border-slate-100 pb-4 sm:pb-6 gap-2">
           <div className="space-y-1">
-            <span className="text-[10px] text-slate-400 uppercase tracking-[0.4em]">{question.topic}</span>
-            <div className="flex items-center gap-3">
-              <span className="text-[9px] px-2 py-0.5 border border-slate-200 text-slate-500">LAYER 0{currentQuestionIdx + 1}</span>
-              <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight leading-tight">{question.prompt}</h3>
+            <span className="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-[0.3em] sm:tracking-[0.4em]">{question.topic}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+              <span className="text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.5 border border-slate-200 text-slate-500 inline-block w-fit">LAYER 0{currentQuestionIdx + 1}</span>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 tracking-tight leading-tight">{question.prompt}</h3>
             </div>
           </div>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4 sm:mb-6">
           <button 
             onClick={() => setShowHint(!showHint)} 
-            className="text-[9px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors"
+            className="text-[8px] sm:text-[9px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors"
           >
             {showHint ? '[ HIDE HINT ]' : '[ SHOW HINT ]'}
           </button>
           {showHint && (
-            <div className="mt-3 p-4 bg-blue-50/50 border-l-4 border-blue-600 animate-in slide-in-from-left duration-300">
-               <p className="text-[11px] text-blue-800 font-bold uppercase tracking-tight leading-relaxed italic">
+            <div className="mt-2 sm:mt-3 p-3 sm:p-4 bg-blue-50/50 border-l-4 border-blue-600 animate-in slide-in-from-left duration-300">
+               <p className="text-[10px] sm:text-[11px] text-blue-800 font-bold uppercase tracking-tight leading-relaxed italic">
                  {question.hint}
                </p>
             </div>
@@ -336,25 +336,25 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
         </div>
 
         {isWrongAnswer && (
-          <div className="mb-8 p-4 bg-red-50 border border-red-200 text-red-600 text-[10px] font-bold uppercase tracking-widest animate-pulse">
+          <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-red-50 border border-red-200 text-red-600 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest animate-pulse">
             Fatal Error: Decryption Mismatch. Security Compromised.
           </div>
         )}
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {question.type === 'MCQ' ? (
             question.options?.map((opt, i) => (
               <button 
                 key={i}
                 onClick={() => onAnswer(opt)}
-                className="w-full text-left p-5 bg-slate-50 border border-slate-100 text-slate-700 hover:bg-white hover:border-slate-300 transition-all group flex items-center rounded-sm"
+                className="w-full text-left p-3 sm:p-4 md:p-5 bg-slate-50 border border-slate-100 text-slate-700 hover:bg-white hover:border-slate-300 transition-all group flex items-center rounded-sm"
               >
-                <span className="w-8 text-[10px] font-mono text-slate-300 group-hover:text-slate-900 transition-colors">{i + 1}.</span>
-                <span className="text-xs md:text-sm tracking-wide">{opt}</span>
+                <span className="w-6 sm:w-8 text-[9px] sm:text-[10px] font-mono text-slate-300 group-hover:text-slate-900 transition-colors">{i + 1}.</span>
+                <span className="text-xs sm:text-sm tracking-wide">{opt}</span>
               </button>
             ))
           ) : (
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <input 
                 autoFocus
                 type="text"
@@ -362,9 +362,9 @@ const UIOverlay: React.FC<UIOverlayProps> = ({
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && onAnswer(inputValue)}
                 placeholder="INPUT DATA..."
-                className="w-full p-5 bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-slate-400 transition-colors text-sm font-mono tracking-widest placeholder:text-slate-300 rounded-sm"
+                className="w-full p-3 sm:p-4 md:p-5 bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-slate-400 transition-colors text-xs sm:text-sm md:text-base font-mono tracking-widest placeholder:text-slate-300 rounded-sm"
               />
-              <button onClick={() => onAnswer(inputValue)} className="w-full py-5 bg-slate-900 text-white font-black uppercase tracking-[0.4em] text-[10px] hover:bg-slate-800 transition-colors">Submit Bit</button>
+              <button onClick={() => onAnswer(inputValue)} className="w-full py-3 sm:py-4 md:py-5 bg-slate-900 text-white font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[9px] sm:text-[10px] hover:bg-slate-800 transition-colors rounded-sm">Submit Bit</button>
             </div>
           )}
         </div>
